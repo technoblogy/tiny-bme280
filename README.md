@@ -10,7 +10,7 @@ The Bosch BME280 is a relatively low cost sensor which measures three environmen
 
 The downside with this sensor is that you have to do quite a bit of calculation to get the final readings; it's not just a case of reading the values from the device via I2C or SPI, as with some other sensors. Both Adafruit and Sparkfun provide a library to interface to the sensor, but unfortunately these don't seem to work on ATtiny processors, such as the ATtiny85, so I set about writing my own Tiny BME280 library. I've only supported the I2C interface as it is the most useful one on ATtiny devices with a limited number of pins.
 
-As with the other libraries my library uses the calculations from the BME280 datasheet, and I checked that it gives identical readings to the Sparkfun one. The only difference was with the pressure reading; Bosch gives two versions of the calculation, one using 64-bit integers and one using 32-bit integers. Sparkfun use the 64-bit version and I used the 32-bit version, but this resulted in a difference of under 1 part in 104. I haven't provided altitude or dew point calculations.
+As with the other libraries my library uses the calculations from the BME280 datasheet, and I checked that it gives identical readings to the Sparkfun one. The only difference was with the pressure reading; Bosch gives two versions of the calculation, one using 64-bit integers and one using 32-bit integers. Sparkfun use the 64-bit version and I used the 32-bit version, but this resulted in a difference of under 1 part in 10000. I haven't provided altitude or dew point calculations.
 
 This library is also compatible with the Bosch BMP280, a similar sensor that provides just temperature and pressure. If you use this sensor you'll get zero humidity readings.
 
