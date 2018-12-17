@@ -1,5 +1,5 @@
-TinyBME280
-==========
+Tiny BME280
+===========
 The Bosch BME280 is the perfect sensor for a home weather station as it provides temperature, pressure, and humidity in a single device. This is an interface to allow you to use the sensor from an ATtiny processor such as the ATtiny85.
 
  
