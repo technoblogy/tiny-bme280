@@ -1,6 +1,6 @@
 /* TinyBME280 Library
 
-   David Johnson-Davies - www.technoblogy.com - 14th December 2018
+   David Johnson-Davies - www.technoblogy.com - 28th May 2019
    
    CC BY 4.0
    Licensed under a Creative Commons Attribution 4.0 International license: 
@@ -8,7 +8,7 @@
 */
 
 #include <stdint.h>
-#include <arduino.h>
+#include <Arduino.h>
 #include <Wire.h>
 
 #ifndef TINYBME280

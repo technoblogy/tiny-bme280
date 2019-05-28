@@ -1,6 +1,6 @@
 /* TinyBME280 Library
 
-   David Johnson-Davies - www.technoblogy.com - 14th December 2018
+   David Johnson-Davies - www.technoblogy.com - 28th May 2019
    
    CC BY 4.0
    Licensed under a Creative Commons Attribution 4.0 International license: 
@@ -73,7 +73,6 @@ int32_t BME280temperature () {
   var2 = (var2 * ((int32_t)T[3])) >> 14;
   BME280t_fine = var1 + var2;
   return (BME280t_fine*5+128)>>8;
-  return t;
 }
 
 // Returns pressure in Pa as unsigned 32 bit integer
