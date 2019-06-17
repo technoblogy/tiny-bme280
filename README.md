@@ -24,7 +24,7 @@ The library provides the following routines:
 
 **BME280pressure()** - gives the pressure in Pa as an unsigned 32-bit integer, so an output value of “96386” equals 96386 Pa, or 963.86 hPa.
 
-**BME280humidity()** - gives the humidity in %RH with a resolution of 0.01%RH, so an output value of “4653” represents 46.53 %RH. Note that you must call BME280temperature() first to set a global temperature variable used by the humidity routine.
+**BME280humidity()** - gives the humidity in %RH with a resolution of 0.01%RH, so an output value of “4653” represents 46.53 %RH. Note that you must call **BME280temperature()** first to set a global temperature variable used by the humidity routine.
 
 #### Altitude
 
