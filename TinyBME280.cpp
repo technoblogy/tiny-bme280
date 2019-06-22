@@ -1,6 +1,6 @@
-/* TinyBME280 Library
+/* TinyBME280 Library v2
 
-   David Johnson-Davies - www.technoblogy.com - 28th May 2019
+   David Johnson-Davies - www.technoblogy.com - 22nd June 2019
    
    CC BY 4.0
    Licensed under a Creative Commons Attribution 4.0 International license: 
