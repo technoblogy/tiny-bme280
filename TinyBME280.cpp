@@ -9,10 +9,10 @@
 
 #include "TinyBME280.h"
 
-const int BME280address = 119;
-
-int16_t T[4], P[10], H[6];
+int16_t T[4], P[10], H[7];
 int32_t BME280t_fine;
+
+int BME280address = 118;
 
 int16_t read16 () {
   uint8_t lo, hi;
@@ -24,6 +24,11 @@ int32_t read32 () {
   uint8_t msb, lsb, xlsb;
   msb = Wire.read(); lsb = Wire.read(); xlsb = Wire.read();
   return (uint32_t)msb<<12 | (uint32_t)lsb<<4 | (xlsb>>4 & 0x0F);
+}
+
+// Can be called before BME280setup
+void BME280setI2Caddress (uint8_t address) {
+  BME280address = address;
 }
 
 // Must be called once at start
@@ -109,8 +114,8 @@ uint32_t BME280humidity () {
   Wire.write(0xFD);
   Wire.endTransmission();
   Wire.requestFrom(BME280address, 2);
-  uint8_t hi = Wire.read();
-  int32_t adc = hi<<8 | Wire.read();
+  uint8_t hi = Wire.read(); uint8_t lo = Wire.read();
+  int32_t adc = (uint16_t)(hi<<8 | lo);
   // Compensate
   int32_t var1; 
   var1 = (BME280t_fine - ((int32_t)76800));

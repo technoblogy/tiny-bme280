@@ -16,8 +16,11 @@
 
 /* Function declarations */
 
+// Can be called before BME280setup
+void BME280setI2Caddress(uint8_t address);
+
 // Sets Normal mode, no upsampling, and reads the chip calibrations
-void BME280setup ();
+void BME280setup();
 
 // Temperature in DegC, resolution is 0.01 DegC
 // Output value of “5123” equals 51.23 DegC
@@ -29,6 +32,6 @@ uint32_t BME280pressure();
 
 // Humidity in %RH, resolution is 0.01%RH
 // Output value of “4653” represents 46.53 %RH
-uint32_t BME280humidity ();
+uint32_t BME280humidity();
 
 #endif
