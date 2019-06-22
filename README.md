@@ -18,6 +18,8 @@ This library is also compatible with the Bosch BMP280, a similar sensor that pro
 
 The library provides the following routines:
 
+**BME280setI2Caddress(address)** - specifies the I2C address. This should be called before **BME280setup()**. You don't need to call this if you are using the default I2C address, 0x77.
+
 **BME280setup()** - sets up the BME280 into its normal measurement mode, with no upsampling, and reads the fixed calibrations from the sensor. You should call this in setup().
 
 **BME280temperature()** - gives the temperature as a signed 32-bit integer in °C with a resolution of 0.01°C. So an output value of “5123” equals 51.23°C.
