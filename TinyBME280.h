@@ -22,6 +22,9 @@ void BME280setI2Caddress(uint8_t address);
 // Sets Normal mode, no upsampling, and reads the chip calibrations
 void BME280setup();
 
+// Sets Sleep Mode for sensor
+void BME280sleep ();
+
 // Temperature in DegC, resolution is 0.01 DegC
 // Output value of “5123” equals 51.23 DegC
 int32_t BME280temperature();

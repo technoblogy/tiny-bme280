@@ -63,6 +63,16 @@ void BME280setup () {
   BME280temperature();
 }
 
+// Can be called if sensor can sleep to save energy
+void BME280sleep () {
+  delay(2);
+  // Set the mode to Normal, no upsampling
+  Wire.beginTransmission(BME280address);
+  Wire.write(0xF4);                             // ctrl_meas
+  Wire.write(0b00000000);                       // what can be better than sleep?!
+  Wire.endTransmission();
+}
+
 // Returns temperature in DegC, resolution is 0.01 DegC
 // Output value of “5123” equals 51.23 DegC
 int32_t BME280temperature () {
