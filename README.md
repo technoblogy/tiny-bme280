@@ -24,6 +24,8 @@ The library provides the following routines:
 
 **BME280setup()** - sets up the BME280 into its normal measurement mode, with no upsampling, and reads the fixed calibrations from the sensor. You should call this in setup().
 
+**BME280sleep()** - sets up the BME280 into sleep mode to save energy, you can easely wake it with **BME280setup()**
+
 **BME280temperature()** - gives the temperature as a signed 32-bit integer in °C with a resolution of 0.01°C. So an output value of “5123” equals 51.23°C.
 
 **BME280pressure()** - gives the pressure in Pa as an unsigned 32-bit integer, so an output value of “96386” equals 96386 Pa, or 963.86 hPa.
