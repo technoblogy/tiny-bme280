@@ -42,3 +42,8 @@ To add altitude use this routine:
     }
 
 where **referencePressure** is the pressure in Pa at zero altitude; for example, 101325.0.
+
+#### Examples
+
+BME_I2CTest.ino - Basic usage example; Sends data through Serial monitor
+BME_Sleep.ino - Sleeps in-between readings
